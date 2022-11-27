@@ -1,0 +1,15 @@
+D:\GeekBrains\algorithms\Lesson1\bin\Debug\net6.0\Lesson1.exe
+D:\GeekBrains\algorithms\Lesson1\bin\Debug\net6.0\Lesson1.deps.json
+D:\GeekBrains\algorithms\Lesson1\bin\Debug\net6.0\Lesson1.runtimeconfig.json
+D:\GeekBrains\algorithms\Lesson1\bin\Debug\net6.0\Lesson1.dll
+D:\GeekBrains\algorithms\Lesson1\bin\Debug\net6.0\Lesson1.pdb
+D:\GeekBrains\algorithms\Lesson1\obj\Debug\net6.0\Lesson1.csproj.AssemblyReference.cache
+D:\GeekBrains\algorithms\Lesson1\obj\Debug\net6.0\Lesson1.GeneratedMSBuildEditorConfig.editorconfig
+D:\GeekBrains\algorithms\Lesson1\obj\Debug\net6.0\Lesson1.AssemblyInfoInputs.cache
+D:\GeekBrains\algorithms\Lesson1\obj\Debug\net6.0\Lesson1.AssemblyInfo.cs
+D:\GeekBrains\algorithms\Lesson1\obj\Debug\net6.0\Lesson1.csproj.CoreCompileInputs.cache
+D:\GeekBrains\algorithms\Lesson1\obj\Debug\net6.0\Lesson1.dll
+D:\GeekBrains\algorithms\Lesson1\obj\Debug\net6.0\refint\Lesson1.dll
+D:\GeekBrains\algorithms\Lesson1\obj\Debug\net6.0\Lesson1.pdb
+D:\GeekBrains\algorithms\Lesson1\obj\Debug\net6.0\Lesson1.genruntimeconfig.cache
+D:\GeekBrains\algorithms\Lesson1\obj\Debug\net6.0\ref\Lesson1.dll
