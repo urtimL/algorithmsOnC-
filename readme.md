@@ -10,3 +10,9 @@ dotnet run - выполнение программы
 Console.Write() - Вывод в одну строку
 Console.WriteLine() - Вывод с переходом на новую строку
 Console.ReadLine() - считать строку из терминала
+
+Генератор случайных чисел
+new Random().Next(min,max)
+
+даст случайное целое число от min до max-1
+[min, max-1] [min, max)
