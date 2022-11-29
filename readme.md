@@ -16,3 +16,6 @@ new Random().Next(min,max)
 
 даст случайное целое число от min до max-1
 [min, max-1] [min, max)
+
+Console.Clear() - Очищает консоль
+Console.SetCursorPosition(x, y) - переносит курсор в точку с координатами x и y
