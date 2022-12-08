@@ -1,4 +1,5 @@
-﻿int a1 = 15;
+﻿/*
+int a1 = 15;
 int b1 = 5;
 int c1 = 3;
 /////////////
@@ -27,3 +28,23 @@ Console.WriteLine($"max1 - {max1}, max2 - {max2}, max3 -{max3}");
 int max = Max(max1, max2, max3);
 
 Console.WriteLine($"max - {max}");
+*/
+//______________________________array_______________________________
+/*
+int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+int Max(int arg1, int arg2, int arg3)
+{
+    int result = arg1;
+    if(arg2 > result) result = arg2;
+    if(arg3 > result) result = arg3;
+    return result;
+}
+
+int result = Max(
+    Max(array[0], array[1], array[2]),
+    Max(array[3], array[4], array[5]),
+    Max(array[6], array[7], array[8])
+);
+Console.WriteLine(result);
+*/
