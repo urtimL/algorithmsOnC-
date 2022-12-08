@@ -210,14 +210,11 @@ for (int i = 2; i <= 10; i++)
 }
 */
 
-//_______________replacing characters in text____________________
+//_________________replacing characters in text____________________
 
 //=====Работа с текстом
-// Дан текст. В тексте нужно все пробелы заменить чёрточками,
-// маленькие буквы “к” заменить большими “К”,
-// а большие “С” маленькими “с”.
-// Ясна ли задача?
-
+// Дан текст. В тексте нужно все пробелы заменить чёрточками
+/*
 string text = "— Я думаю, — сказал князь, улыбаясь, — что,"
             + "ежели бы вас послали вместо нашего милого Винценгероде,"
             + "вы бы взяли приступом согласие прусского короля."
@@ -237,3 +234,40 @@ string Replace(string text, char oldValue, char newValue)
 }
 string newText = Replace(text, ' ', '|');
 Console.WriteLine(newText);
+*/
+
+//______________________selection sort algorithm_________________________
+
+int[] arr = { 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 1 };
+
+void PrintArray(int[] array)
+{
+    int count = array.Length;
+
+    for (int i = 0; i < count; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+    Console.WriteLine();
+}
+
+void SelectionSort(int[] array)
+{
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        int minPosition = i;
+
+        for (int j = i + 1; j < array.Length; j++)
+        {
+            if (array[j] < array[minPosition]) minPosition = j;
+        }
+
+        int temporary = array[i];
+        array[i] = array[minPosition];
+        array[minPosition] = temporary;
+    }
+}
+
+PrintArray(arr);
+SelectionSort(arr);
+PrintArray(arr);
