@@ -6,6 +6,7 @@
 
 2, 4 -> 16
 */
+/*
 int error = 0;
 void Exponentiation(int[] arr)
 {
@@ -31,5 +32,32 @@ if (array.Length != 2)
 }
 
 if (error == 0) Exponentiation(array);
+*/
+//===================================================================================================
+/*
+Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+452 -> 11
+82 -> 10
+9012 -> 12
+*/
+
+int SummOfNumber(int num)
+{
+    int rez = 0;
+
+    while (num != 0)
+    {
+        rez += num % 10;
+        num /= 10;
+    }
+
+    return rez;
+}
+
+Console.Write("Введите число: ");
+
+int number = int.Parse(Console.ReadLine()!);
+Console.WriteLine(SummOfNumber(number));
 
 
