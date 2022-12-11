@@ -1,2 +1,24 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿/*
+Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
+Напишите программу, которая покажет количество чётных чисел в массиве.
+
+[345, 897, 568, 234] -> 2
+*/
+
+int[] array = { 345, 897, 568, 234, 333, 850, 100, 888 };
+
+int NumberOfEven(int[] arr)
+{
+    int rez = 0;
+
+    foreach (var item in arr)
+    {
+        if (item % 2 == 0)
+        {
+            rez++;
+        }
+    }
+    return rez;
+}
+
+Console.WriteLine($"Количество четных чисел в массиве: [{String.Join("; ", array)}], равняется - {NumberOfEven(array)} шт.");
