@@ -31,6 +31,7 @@ Console.WriteLine($"Количество четных чисел в массив
 [3, 7, 23, 12] -> 19
 [-4, -6, 89, 6] -> 0
 */
+/*
 Console.Write("Для создания массива введите числа через запятую: ");
 int[] array = Console.ReadLine().Split(',').Select(int.Parse).ToArray();
 
@@ -52,3 +53,31 @@ int SumElementsOddPositions(int[] arr)
 
 string text = "Сумма элементов, стоящих на нечетных позициях заданного массива";
 Console.WriteLine($"{text}, равна: {SumElementsOddPositions(array)}");
+*/
+//===============================================================================================
+/*
+Задача 38: Задайте массив вещественных чисел. Найдите разницу между 
+максимальным и минимальным элементов массива.
+
+[3 7 22 2 78] -> 76
+*/
+Console.Write("Для создания массива введите числа через пробел: ");
+int[] array = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+string text = "Разница между максимальным и минимальным элементом массива, составляет: ";
+
+int DifferenceBetweenMaxAndMinElements(int[] arr)
+{
+    int minElement = arr[0];
+    int maxElement = 0;
+
+    foreach (var item in arr)
+    {
+        if (maxElement < item) maxElement = item;
+        if (minElement > item) minElement = item;
+    }
+
+    return maxElement - minElement;
+}
+
+Console.WriteLine($"{text}{DifferenceBetweenMaxAndMinElements(array)}");
