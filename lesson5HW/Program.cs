@@ -61,6 +61,7 @@ Console.WriteLine($"{text}, равна: {SumElementsOddPositions(array)}");
 
 [3 7 22 2 78] -> 76
 */
+/*
 Console.Write("Для создания массива введите числа через пробел: ");
 int[] array = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
@@ -81,3 +82,39 @@ int DifferenceBetweenMaxAndMinElements(int[] arr)
 }
 
 Console.WriteLine($"{text}{DifferenceBetweenMaxAndMinElements(array)}");
+*/
+//====================================================================================================
+/*
+Задача 37 со звездочкой, дополнительная: Найдите произведение пар чисел в одномерном массиве. 
+Парой считаем первый и последний элемент, второй и предпоследний и т.д. 
+Результат запишите в новом массиве.
+
+[1 2 3 4 5] -> 5 8 3
+[6 7 3 6] -> 36 21
+*/
+
+Console.Write("Для создания массива введите числа через пробел: ");
+int[] array = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+string text = "Произведение пар чисел в массиве: ";
+
+void ProductPairsNumbers(int[] arr, string message)
+{
+    int size = arr.Length;
+    int length = size / 2;
+    int lastNumber = 0;
+    int k = 1;
+
+    for (int i = 0; i < length; i++)
+    {
+        message += Convert.ToString(arr[i] * arr[size - k]) + " ";
+        lastNumber = arr[i + 1];
+        k++;
+    }
+
+    message += size % 2 != 0 ? Convert.ToString(lastNumber) : "";
+
+    Console.WriteLine($"{message}");
+}
+
+ProductPairsNumbers(array, text);
