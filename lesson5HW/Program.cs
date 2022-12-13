@@ -131,8 +131,7 @@ for (int i = 0; i < length; i++)
     message += Convert.ToString(arr[i] * arr[size - k]) + " ";
     lastNumber = arr[i + 1];
     k++;
-}
 
-message += size % 2 != 0 ? Convert.ToString(lastNumber) : "";
+    message += size % 2 != 0 ? Convert.ToString(lastNumber) : "";
 
-Console.WriteLine($"{message}");
+    Console.WriteLine($"{message}");
