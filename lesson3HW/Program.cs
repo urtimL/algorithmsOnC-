@@ -62,6 +62,8 @@ Console.WriteLine("Расстояние между 2 точками: " + Math.Ro
 3 -> 1, 8, 27
 5 -> 1, 8, 27, 64, 125
 */
+
+
 Console.Write("Введите число N:");
 int finish = Convert.ToInt32(Console.ReadLine());
 
