@@ -92,7 +92,7 @@ Console.WriteLine($"{text}{DifferenceBetweenMaxAndMinElements(array)}");
 [1 2 3 4 5] -> 5 8 3
 [6 7 3 6] -> 36 21
 */
-
+/*
 Console.Write("Для создания массива введите числа через пробел: ");
 int[] array = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
@@ -118,3 +118,21 @@ void ProductPairsNumbers(int[] arr, string message)
 }
 
 ProductPairsNumbers(array, text);
+*/
+int[] arr = { 1, 2, 3, 4, 5, 6 };
+int size = arr.Length;
+int length = size / 2;
+int lastNumber = 0;
+int k = 1;
+string message = "";
+
+for (int i = 0; i < length; i++)
+{
+    message += Convert.ToString(arr[i] * arr[size - k]) + " ";
+    lastNumber = arr[i + 1];
+    k++;
+}
+
+message += size % 2 != 0 ? Convert.ToString(lastNumber) : "";
+
+Console.WriteLine($"{message}");
