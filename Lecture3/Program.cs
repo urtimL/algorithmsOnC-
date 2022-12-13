@@ -274,7 +274,7 @@ PrintArray(arr);
 */
 
 //___________________________home work___________________________________
-
+/*
 int[] arr = { 1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
 void PrintArray(int[] array)
@@ -308,3 +308,12 @@ void SelectionSort(int[] array)
 PrintArray(arr);
 SelectionSort(arr);
 PrintArray(arr);
+*/
+Console.WriteLine("write text");
+int[] array = Console.ReadLine().Split('.').Select(int.Parse).ToArray();
+
+if (array[0] == array[4] && array[1] == array[3])
+{
+    Console.WriteLine("Это число палиндром");
+}
+else Console.WriteLine("Это число НЕ палиндром");
