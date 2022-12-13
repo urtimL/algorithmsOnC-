@@ -133,5 +133,5 @@ for (int i = 0; i < length; i++)
     k++;
 
     message += size % 2 != 0 ? Convert.ToString(lastNumber) : "";
-
-    Console.WriteLine($"{message}");
+}
+Console.WriteLine($"{message}");
