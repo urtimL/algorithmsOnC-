@@ -77,6 +77,7 @@ void DecimalToBinary(int num)
         num /= 2;
     }
 
+    Console.WriteLine(Convert.ToInt32(rez));
     Console.WriteLine(rez);
 }
 
