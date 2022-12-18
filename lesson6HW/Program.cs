@@ -72,8 +72,10 @@ void DecimalToBinary(int num)
 
     while (num != 0)
     {
-        if (num % 2 == 0) rez = "0" + rez;
-        else rez = "1" + rez;
+        //  if (num % 2 == 0) rez = "0" + rez;
+        //  else rez = "1" + rez;
+        char k = num % 2 == 0 ? '0' : '1';
+        rez = k + rez;
         num /= 2;
     }
 
