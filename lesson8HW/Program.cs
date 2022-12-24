@@ -235,9 +235,9 @@ LineByLineOutputArrayElements(x, y, z);
 11 16 15 06
 10 09 08 07
 */
-void FillingArrayInSpiral()
+void FillingArrayInSpiral(int row, int col)
 {
-    int[,] arr = new int[4, 4];
+    int[,] arr = new int[row, col];
     int number = 1;
     int amountOfElements = arr.Length;
     int lengthI = arr.GetLength(0) - 1;
@@ -245,7 +245,6 @@ void FillingArrayInSpiral()
     int I = 0, I1 = 0;
     int J = 0, J1 = 0;
     int k = 0;
-    //   Console.WriteLine(amountOfElements);
 
     while (number < amountOfElements)
     {
@@ -253,8 +252,6 @@ void FillingArrayInSpiral()
         for (int j = J; j < lengthJ; j++)
         {
             arr[I, j] = number++;
-            //  Console.WriteLine($"1 ({I},{j}) - {arr[I, j]}  lengthI: {lengthI}; lengthJ: {lengthJ}");
-            //  Console.WriteLine();
             J = j;
         }
 
@@ -263,8 +260,6 @@ void FillingArrayInSpiral()
         for (int i = I; i < lengthI; i++)
         {
             arr[i, J] = number++;
-            //   Console.WriteLine($"2 ({i},{J}) - {arr[i, J]}  lengthI: {lengthI}; lengthJ: {lengthJ}");
-            //   Console.WriteLine();
             I = i;
         }
 
@@ -274,8 +269,6 @@ void FillingArrayInSpiral()
         for (int j = 0; j < lengthJ - k; j++)
         {
             arr[I, J1 - j] = number++;
-            //   Console.WriteLine($"3 ({I},{J1 - j}) - {arr[I, J1 - j]}  lengthI: {lengthI}; lengthJ: {lengthJ}");
-            //   Console.WriteLine();
             J = J1 - j;
         }
 
@@ -285,8 +278,6 @@ void FillingArrayInSpiral()
         for (int i = 0; i < lengthI - k; i++)
         {
             arr[I1 - i, J] = number++;
-            //    Console.WriteLine($"4 ({I1 - i},{J}) - {arr[I1 - i, J]}  lengthI: {lengthI}; lengthJ: {lengthJ}");
-            //    Console.WriteLine();
             I = I1 - i;
         }
 
@@ -294,11 +285,16 @@ void FillingArrayInSpiral()
         lengthJ--;
         J++;
         k++;
-        //    Console.WriteLine($"5 ({I},{J})   lengthI: {lengthI}; lengthJ: {lengthJ}");
-        //    Console.WriteLine();
+        if (number == amountOfElements) arr[I, J] = number;
     }
 
     PrintMatrixInt(arr);
 }
 
-FillingArrayInSpiral();
+Console.Write("Введите количество строк: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите количество столбцов: ");
+int columns = Convert.ToInt32(Console.ReadLine());
+
+FillingArrayInSpiral(rows, columns);
