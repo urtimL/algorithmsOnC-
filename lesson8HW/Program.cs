@@ -235,13 +235,20 @@ LineByLineOutputArrayElements(x, y, z);
 11 16 15 06
 10 09 08 07
 */
+
 void FillingArrayInSpiral(int row, int col)
 {
     int[,] arr = new int[row, col];
     int number = 1;
     int amountOfElements = arr.Length;
-    int lengthI = arr.GetLength(0) - 1;
-    int lengthJ = arr.GetLength(1) - 1;
+    int lengthI = arr.GetLength(0);
+    int lengthJ = arr.GetLength(1);
+    int smallest = lengthI > lengthJ ? lengthJ : lengthI;
+    int bigest = lengthI < lengthJ ? lengthJ : lengthI;
+    bool odd = smallest % 2 != 0;
+    bool smallestIsI = lengthI < lengthJ;
+    lengthI--;
+    lengthJ--;
     int I = 0, I1 = 0;
     int J = 0, J1 = 0;
     int k = 0;
@@ -253,6 +260,7 @@ void FillingArrayInSpiral(int row, int col)
         {
             arr[I, j] = number++;
             J = j;
+            if (number > amountOfElements) break;
         }
 
         //с верху вниз
@@ -261,6 +269,7 @@ void FillingArrayInSpiral(int row, int col)
         {
             arr[i, J] = number++;
             I = i;
+            if (number > amountOfElements) break;
         }
 
         //с права на лево
@@ -270,6 +279,7 @@ void FillingArrayInSpiral(int row, int col)
         {
             arr[I, J1 - j] = number++;
             J = J1 - j;
+            if (number > amountOfElements) break;
         }
 
         //с низу в верх
@@ -279,13 +289,25 @@ void FillingArrayInSpiral(int row, int col)
         {
             arr[I1 - i, J] = number++;
             I = I1 - i;
+            if (number > amountOfElements) break;
         }
 
         lengthI--;
         lengthJ--;
         J++;
         k++;
-        if (number == amountOfElements) arr[I, J] = number;
+
+        //если количество строк или столбцов нечетное
+        if (odd && smallest / 2 == k)
+        {
+            int length = bigest - 2 * k;
+            for (int i = 0; i < length; i++)
+            {
+                if (smallestIsI) arr[k, J + i] = number++;
+                else arr[I + i, k] = number++;
+            }
+            break;
+        }
     }
 
     PrintMatrixInt(arr);
